@@ -1,0 +1,111 @@
+Doctors Table
+doctor_id (PK)
+doctor_name
+specilization
+contact_info
+
+
+Patient Table:
+patient_id (Primary Key)
+patient_name
+contact_info
+
+Visit Table:
+
+visit_id (Primary Key)
+patient_id (Foreign Key referencing Patient Table)
+doctor_id (Foreign Key referencing Doctor Table)
+visit_date
+visit_details
+
+Disease Table:
+
+disease_id (Primary Key)
+disease_name
+description
+
+
+Diagnosis Table:
+
+diagnosis_id (Primary Key)
+visit_id (Foreign Key referencing Visit Table)
+disease_id (Foreign Key referencing Disease Table)
+diagnosis_date
+diagnosis_details
+
+
+
+Location
+region_id (PK)
+city_name
+
+User Table:
+
+user_id (Primary Key)
+username
+email
+preferred_region_id (Foreign Key referencing Region Table)
+
+Post Table:
+
+post_id (Primary Key)
+title
+text
+user_id (Foreign Key referencing User Table)
+location
+region_id (Foreign Key referencing Region Table)
+
+
+Category Table:
+
+category_id (Primary Key)
+category_name
+other_category_details
+
+Post_Category Table (Many-to-Many Relationship Table):
+
+post_id (Foreign Key referencing Post Table)
+category_id (Foreign Key referencing Category Table)
+
+
+Soccer
+
+Teams
+team_id(Primary Key)
+team_name
+
+Players
+player_id
+player_name
+team_id (FK)
+
+Refrees
+ref_id
+ref_name
+
+
+Game table
+match_id
+start_date
+end_date
+
+
+Game_Referee Table (Many-to-Many Relationship Table):
+
+game_id (Foreign Key referencing Game Table)
+referee_id (Foreign Key referencing Referee Table)
+
+Match Table:
+
+match_id (Primary Key)
+team1_id (Foreign Key referencing Team Table)
+team2_id (Foreign Key referencing Team Table)
+match_date
+
+
+Season Table:
+
+season_id (Primary Key)
+start_date
+end_date
+
